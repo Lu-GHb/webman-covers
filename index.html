@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mes scripts</title>
+  <style>
+    :root { --bg:#fafafa; --fg:#1a1a1a; --card:#fff; --border:#e2e2e2; --accent:#2563eb; --muted:#666; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#111; --fg:#eee; --card:#1b1b1b; --border:#333; --accent:#60a5fa; --muted:#999; }
+    }
+    body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui, sans-serif; }
+    main { max-width:640px; margin:0 auto; padding:32px 16px; }
+    h1 { margin:0 0 4px; }
+    p.sub { color:var(--muted); margin:0 0 24px; }
+    .file { display:flex; justify-content:space-between; align-items:center; gap:12px;
+            background:var(--card); border:1px solid var(--border); border-radius:10px;
+            padding:12px 16px; margin-bottom:10px; }
+    .file small { display:block; color:var(--muted); }
+    .file a { background:var(--accent); color:#fff; text-decoration:none; padding:8px 14px;
+              border-radius:8px; white-space:nowrap; }
+    footer { color:var(--muted); font-size:14px; margin-top:24px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Mes scripts</h1>
+  <p class="sub">Clique sur « Télécharger » pour récupérer un script.</p>
+
+  <!-- Copie ce bloc pour chaque fichier. Le fichier .bat doit être dans le dossier "files/" -->
+  <div class="file">
+    <div>
+      <strong>mon-script.bat</strong>
+      <small>Description courte de ce que fait le script</small>
+    </div>
+    <a href="files/mon-script.bat" download>Télécharger</a>
+  </div>
+
+  <footer>
+    Windows peut afficher un avertissement au téléchargement : c'est normal pour les fichiers .bat.
+    Ouvre-les avec un clic droit → « Modifier » si tu veux vérifier leur contenu avant de les lancer.
+  </footer>
+</main>
+</body>
+</html>
